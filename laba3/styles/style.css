@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+article {
+    font-family: Verdana, sans-serif;
+    width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: green;
+    text-align: center;
+}
+
+header p {
+    background-color: red;
+    color: white;
+}
+
+figure {
+    border: 2px solid black;
+    padding: 10px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+nav {
+    width: 400px;
+    margin: 20px auto;
+    border-top: 2px solid purple;
+    border-left: 2px solid purple;
+    border-right: 2px solid purple;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    border-bottom: 2px solid purple;
+}
+
+nav a {
+    display: block;
+    padding: 12px 20px;
+    background-color: pink;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: hotpink;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.image {
+    padding: 50px;
+}
+
+.linkToNextPage {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    background: rebeccapurple;
+}
+
+.main-news {
+    background-color: LightBlue;
+}
+
+.normal-news {
+    background-color: LightYellow;
+}
+
+.site-nav {
+    background-color: PaleVioletRed;
+    list-style: none;
+    padding: 0;
+    width: 200px;
+    border: 1px solid MediumVioletRed;
+}
+
+.site-nav .site-nav-item {
+    border-bottom: 1px solid MediumVioletRed;
+    padding: 5px;
+}
+
+.site-nav .site-nav-item:last-child {
+    border-bottom: none;
+}
+
+.site-nav .site-nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-nav .site-nav-item a:hover {
+    text-decoration: underline;
+}
