@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Rounded", Arial, sans-serif;
+}
+
+.page-container {
+    max-width: 980px;
+    margin: 20px auto 0;
+}
+
+.left-side {
+    display: inline-block;
+    width: 25%;
+    background-color: #0d9aff;
+    color: #fff;
+    height: 1000px;
+}
+
+.right-side {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(75% - 6px);
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 20px auto 15px auto;
+}
+
+.img {
+    display: block;
+    width: 100%;
+}
+
+nav {
+    background-color: #0751ff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.left-side a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section,
+h1,
+h2,
+p,
+ul,
+ol,
+li,
+hr,
+address,
+time {
+    margin-left: 10px;
+}
+
+.left-side h1 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.left-side h2 {
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.left-side hr {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 10px;
+    background-color: #ffeb55;
+    height: 3px;
+    border: none;
+    border-radius: 7px;
+}
+
+.left-side p {
+    font-size: 15px;
+}
+
+.left-side ul {
+    list-style-type: none;
+    margin-top: 7px;
+}
+
+.interests-list ul {
+    list-style-type: circle;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+.right-side hr {
+    background-color: #ffeb55;
+    height: 3px;
+    border: none;
+    border-radius: 7px;
+    margin-left: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.right-side h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.date {
+    float: right;
+    margin-right: 10px;
+}
+
+.l-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h2,
+section {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.l-location {
+    font-style: italic;
+}
+
+.l-info {
+    margin-right: 100px;
+}
+
+.right-side ul {
+    list-style-type: none;
+}
+
+ol {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.language-lvl {
+    float: right;
+    margin-right: 15px;
+}
+
+.l-skills {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.l-skills li {
+    margin-right: 15px;
+}
+
+.cv-link {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cv-link:hover {
+    color: slateblue;
+}
