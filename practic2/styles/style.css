@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: auto;
+}
+
+nav {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 100px;
+    width: 70%;
+    h1 {
+        text-align: center;
+    }
+    a {
+        padding: 5px;
+        width: 5vw;
+        text-align: center;
+        margin: 0 auto;
+        color: black;
+        text-decoration: none;
+        border: 1px solid black;
+        transition: 0.3s;
+        &:hover {
+            color: rgb(60, 255, 0);
+            border: 1px solid rgb(130, 255, 93);
+        }
+    }
+}
