@@ -3,27 +3,49 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Таблиці в HTML5</title>
+    <title>Внутрішні посилання</title>
+    <style>
+        a:link {
+            color: blue;
+            text-decoration: none
+        }
+        
+        a:visited {
+            color: pink;
+            text-decoration: none
+        }
+        
+        a:hover {
+            color: red;
+            text-decoration: underline
+        }
+        
+        a:active {
+            color: yellow;
+            text-decoration: underline
+        }
+    </style>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td>Модель</td>
-            <td>Компанія</td>
-            <td>Ціна</td>
-        </tr>
-        <tr>
-            <td>Nexus 6P</td>
-            <td>Google</td>
-            <td>49000</td>
-        </tr>
-        <tr>
-            <td>iPhone 14 Pro</td>
-            <td>Apple</td>
-            <td>62000</td>
-        </tr>
-    </table>
+    <div>
+        <a href="content.html">Підручник по HTML5</a>
+        <a href="https://www.google.com/">Google</a>
+    </div>
+
+    <br>
+
+    <div>
+        <a href="#paragraph1">Параграф 1</a> |
+        <a href="#paragraph2">Параграф 2</a> |
+        <a href="#paragraph3">Параграф 3</a>
+        <h2 id="paragraph1">Параграф 1</h2>
+        <p>Вміст параграфа 1</p>
+        <h2 id="paragraph2">Параграф 2</h2>
+        <p>Вміст параграфа 2</p>
+        <h2 id="paragraph3">Параграф 3</h2>
+        <p>Вміст параграфа 3</p>
+    </div>
 </body>
 
 </html>
