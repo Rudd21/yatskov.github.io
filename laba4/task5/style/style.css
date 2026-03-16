@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: auto;
+}
+
+body {
+    font-size: 35px;
+}
+
+table {
+    border-collapse: collapse;
+    border: black solid 2px;
+    margin: 10px auto 0;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+tr:nth-child(2n) td:nth-child(2n+1) {
+    background-color: rgb(159, 159, 159);
+}
+
+tr:nth-child(2n+1) td:nth-child(2n) {
+    background-color: rgb(159, 159, 159);
+}
