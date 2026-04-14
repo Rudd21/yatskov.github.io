@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: auto;
+}
+
+body {
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+table {
+    margin: 10px 20px;
+    width: 17%;
+    min-width: 230px;
+    border-collapse: collapse;
+    text-align: center;
+    float: left;
+}
+
+thead {
+    color: #fff;
+}
+
+.page-wrapper {
+    margin: 10px auto;
+    width: fit-content;
+}
+
+.table-container {
+    margin: 0 auto;
+}
+
+.tiny-sub {
+    border: 3px solid #00a37d;
+    border-bottom: #007e61 solid 10px;
+}
+
+.small-sub {
+    border: 3px solid #ff8c00;
+    border-bottom: #c76e00 solid 10px;
+}
+
+.medium-sub {
+    border: 3px solid #ce0000;
+    border-bottom: #840000 solid 10px;
+}
+
+.tiny-sub thead {
+    background-color: #00a37d;
+}
+
+.small-sub thead {
+    background-color: #ff8c00;
+}
+
+.medium-sub thead {
+    background-color: #ce0000;
+}
+
+.price-header {
+    padding-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.description-header {
+    padding: 15px 0;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.tiny-sub tbody {
+    border-top: #007e61 solid 10px;
+}
+
+.small-sub tbody {
+    border-top: #c76e00 solid 10px;
+}
+
+.medium-sub tbody {
+    border-top: #840000 solid 10px;
+}
+
+tbody td {
+    padding: 5px;
+    color: #7c7c7c;
+}
+
+tbody tr:nth-child(1) td {
+    padding-top: 15px;
+}
+
+.separator {
+    border-top: #9d9d9d 3px dashed;
+    width: 90%;
+    margin: 15px auto 20px;
+}
+
+.button {
+    position: relative;
+    margin: 0 auto 20px;
+    width: 60%;
+    height: 50px;
+}
+
+.tiny-sub .button {
+    background-color: #00a37d;
+}
+
+.small-sub .button {
+    background-color: #ff8c00;
+}
+
+.medium-sub .button {
+    background-color: #ce0000;
+}
+
+.button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
