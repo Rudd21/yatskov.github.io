@@ -14,7 +14,6 @@ h1 {
 .sale-button-text,
 .price {
     text-transform: uppercase;
-    margin-bottom: 50px;
     font-weight: 500;
     font-size: 20px;
     text-decoration: none;
@@ -76,14 +75,6 @@ h1 {
     position: relative;
 }
 
-.on-sale-soon {
-    width: 50%;
-    padding: 11px 0;
-    background: #cc349c;
-    text-align: center;
-    margin-top: 40px;
-}
-
 .photo-block img {
     width: 100%;
     height: 100%;
@@ -103,9 +94,25 @@ h1 {
     cursor: pointer;
 }
 
+.on-sale-soon-button {
+    width: 50%;
+    height: 70px;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #cc349c;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+
+.on-sale-soon-button span {
+    color: white;
+}
+
 .old-price {
     text-decoration: line-through;
     font-size: 16px;
+    margin-right: 5px;
     color: rgb(0, 0, 0);
     font-weight: bold;
     text-transform: uppercase;
@@ -113,7 +120,7 @@ h1 {
 
 .price {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .price-on-sale-soon {
