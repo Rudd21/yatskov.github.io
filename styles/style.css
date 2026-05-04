@@ -195,3 +195,9 @@ ol {
 .cv-link:hover {
     color: slateblue;
 }
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
