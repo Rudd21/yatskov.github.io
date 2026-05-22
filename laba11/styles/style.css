@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    padding: 15px;
+    box-shadow: 0px 0px 25px -2px #C7C7C7;
+    padding: 35px;
+    text-align: center;
+    width: 85%;
+    margin: 3rem auto;
+    border-radius: 15px;
+}
+
+.form_desc {
+    width: 60%;
+    margin: 5rem auto;
+    text-align: center;
+    p {
+        padding-top: 10px;
+        color: #515151;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 15px 20px;
+    margin: 0 auto;
+    background: #FAF8F8;
+    border: 1px solid #ececec;
+    border-radius: 15px;
+}
+
+.form_name {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.form_name h3 {
+    margin: 3px 0;
+    font-size: 20px;
+}
+
+.form_name p {
+    color: #515151;
+    margin: 3px 0;
+    font-size: 13px;
+}
+
+hr {
+    margin: 5px;
+    color: #515151;
+    opacity: 0.5;
+}
+
+.input_row {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 200px;
+    padding: 15px;
+    input {
+        margin-left: 5px;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 25px -2px #C7C7C7;
+        border: 0;
+    }
+}
+
+button {
+    color: white;
+    padding: 10px;
+    border: 0;
+    border-radius: 25px;
+    margin: 3rem auto;
+    width: 75px;
+    font-weight: bold;
+    background: linear-gradient(180deg, #9E96F2 0%, #EC31F0 100%);
+}
+
+@media (min-width: 768px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        min-width: 450px;
+        padding: 15px 20px;
+        margin: 0 auto;
+        background: #FAF8F8;
+        border: 1px solid #ececec;
+        border-radius: 15px;
+    }
+    .input_row {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 200px;
+        padding: 15px;
+        input {
+            margin-left: 5px;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 25px;
+            box-shadow: 0px 0px 25px -2px #C7C7C7;
+            border: 0;
+        }
+    }
+}
