@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .letter-box {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid #333;
+            margin: 5px;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleBtn">Показати блоки</button>
+    <div id="letters"></div>
+
+    <script>
+        const surname = "Яцков";
+        const btn = document.getElementById('toggleBtn');
+        const container = document.getElementById('letters');
+
+        btn.addEventListener('click', () => {
+            if (container.children.length > 0) {
+                container.innerHTML = '';
+            } else {
+                for (let char of surname) {
+                    const div = document.createElement('div');
+                    div.className = 'letter-box';
+                    div.textContent = char;
+
+                    div.addEventListener('mouseenter', () => {
+                        alert(`Це літера [ ${char} ]`);
+                    });
+
+                    container.appendChild(div);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

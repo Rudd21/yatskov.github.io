@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        function generatePassword(name, journalNum) {
+            const firstThreeLetters = name.slice(0, 3);
+            const numPart = journalNum * 2;
+            const password = `${firstThreeLetters}${numPart}`;
+
+            document.getElementById('container').innerHTML = `<strong>Ваш пароль:</strong> ${password}`;
+        }
+
+        const name = "Тарас";
+        const journalNumber = 12;
+        generatePassword(name, journalNumber);
+    </script>
+</body>
+</html>

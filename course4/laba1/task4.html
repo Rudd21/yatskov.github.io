@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        function checkEvenOdd(number) {
+            const container = document.getElementById('container');
+            const isEven = number % 2 === 0;
+            const color = isEven ? 'green' : 'red';
+            const statusText = isEven ? 'парне' : 'непарне';
+
+            container.innerHTML = `<p style="color: ${color}; font-weight: bold;">Число ${number} є ${statusText}.</p>`;
+        }
+
+        const journalNumber = 12;
+        checkEvenOdd(journalNumber);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        const journalNumber = 12;
+        const lastDigit = journalNumber % 10;
+        const container = document.getElementById('container');
+
+        let htmlContent = `<h3>Таблиця множення для числа ${lastDigit}:</h3><ul>`;
+        for (let i = 1; i <= 10; i++) {
+            htmlContent += `<li>${lastDigit} * ${i} = ${lastDigit * i}</li>`;
+        }
+        htmlContent += '</ul>';
+
+        container.innerHTML = htmlContent;
+    </script>
+</body>
+</html>

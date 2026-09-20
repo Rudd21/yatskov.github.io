@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ol id="studentsList"></ol>
+
+    <script>
+        const count = parseInt(prompt("Введіть кількість студентів у групі:"), 10);
+        const list = document.getElementById('studentsList');
+
+        for (let i = 0; i < count; i++) {
+            const studentName = prompt(`Введіть прізвище та ім'я студента №${i + 1}:`);
+            if (studentName) {
+                const li = document.createElement('li');
+                li.textContent = studentName;
+                list.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
