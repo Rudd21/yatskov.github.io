@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function calculate() {
+            let result = "Значення у функції (Function Scope)";
+
+            if (true) {
+                let result = "Значення всередині IF (Block Scope)";
+                console.log("Змінна всередині if:", result);
+            }
+
+            console.log("Змінна у функції (поза if):", result);
+        }
+
+        calculate();
+    </script>
+</body>
+</html>

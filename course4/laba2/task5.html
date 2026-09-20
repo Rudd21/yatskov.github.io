@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const name = prompt("Введіть ім'я:");
+        const age = prompt("Введіть вік:");
+
+        const isContinued = confirm(`Hello, ${name}! Your age is ${age}. Continue?`);
+
+        if (isContinued) {
+            alert("Welcome!");
+        } else {
+            alert("Goodbye!");
+        }
+    </script>
+</body>
+</html>

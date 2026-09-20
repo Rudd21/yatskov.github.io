@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+</head>
+<body>
+
+    <script>
+        const journalNumber = 12;
+        const secretNumber = journalNumber % 10;
+
+        const userGuess = parseInt(prompt("Вгадайте число від 0 до 9:"), 10);
+
+        if (userGuess === secretNumber) {
+            alert("Correct!");
+        } else {
+            alert("Wrong!");
+        }
+    </script>
+</body>
+</html>
