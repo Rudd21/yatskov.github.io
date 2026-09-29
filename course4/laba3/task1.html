@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Завдання: Генератор випадкових чисел</title>
+</head>
+<body>
+
+    <button id="next">Next number</button>
+    <div id="out" style="margin-top: 10px; font-size: 18px; font-weight: bold;"></div>
+
+    <script>
+        // Функція-генератор випадкових чисел у нескінченному циклі
+        function* randomGenerator(min, max) {
+            while (true) {
+                yield Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+        }
+
+        // Запитуємо межі у користувача
+        const minVal = parseInt(prompt("Введіть мінімальне значення (min):"), 10) || 1;
+        const maxVal = parseInt(prompt("Введіть максимальне значення (max):"), 10) || 100;
+
+        // Створюємо екземпляр генератора
+        const gen = randomGenerator(minVal, maxVal);
+
+        const btn = document.getElementById('next');
+        const out = document.getElementById('out');
+
+        btn.addEventListener('click', () => {
+            // Отримуємо наступне значення від генератора
+            const randomNumber = gen.next().value;
+            out.textContent = `Згенероване число: ${randomNumber}`;
+        });
+    </script>
+</body>
+</html>

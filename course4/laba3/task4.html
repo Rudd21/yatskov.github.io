@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Завдання: Втрата контексту</title>
+</head>
+<body>
+
+    <button id="hello">Say</button>
+
+    <script>
+        const inputName = prompt("Введіть ваше ім'я:");
+
+        const user = {
+            name: inputName,
+            say() {
+                alert(`Hello, ${this.name}`);
+            }
+        };
+
+        const btn = document.getElementById('hello');
+
+        /* 
+           ЧОМУ ВТРАЧАЄТЬСЯ context (this):
+           Якщо написати: btn.addEventListener('click', user.say);
+           Функція user.say викликається як обробник події, і її 'this' стає 
+           посиланням на сам DOM-елемент (кнопку <button>), а не об'єкт user. 
+           Оскільки у кнопки немає властивості name, буде виведено "Hello, undefined".
+
+           РІШЕННЯ:
+           Використовуємо метод .bind(), який створює нову функцію з прив'язаним контекстом user.
+        */
+
+        // Прив'язуємо контекст this до об'єкта user:
+        btn.addEventListener('click', user.say.bind(user));
+    </script>
+</body>
+</html>

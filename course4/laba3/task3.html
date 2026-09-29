@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Завдання: Генератор діалогів</title>
+</head>
+<body>
+
+    <script>
+        function* chatBot() {
+            // Крок 1: перший yield повертає перше запитання
+            const name = yield "Hi! What is your name?";
+            
+            // Крок 2: повертає друге запитання, підставляючи ім'я
+            const mood = yield `Nice to meet you, ${name}! How are you?`;
+            
+            // Крок 3: завершення розмови
+            return "Goodbye!";
+        }
+
+        const bot = chatBot();
+
+        // Перший виклик повертає перше запитання бота
+        let q1 = bot.next(); 
+        let userName = prompt(q1.value);
+
+        // Передаємо ім'я користувача, отримуємо друге запитання
+        let q2 = bot.next(userName); 
+        let userMood = prompt(q2.value);
+
+        // Передаємо настрій, отримуємо фінальне повідомлення
+        let finalStep = bot.next(userMood); 
+        alert(finalStep.value);
+    </script>
+</body>
+</html>

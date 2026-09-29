@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Завдання: Генератор паролів</title>
+</head>
+<body>
+
+    <div id="result"></div>
+
+    <script>
+        // Генератор, який приймає символи через next(value)
+        function* passwordGenerator() {
+            let password = "";
+            while (true) {
+                // Отримуємо символ, який передали у next(...)
+                const char = yield password;
+                if (char === 'done') {
+                    return password;
+                }
+                if (char) {
+                    password += char;
+                }
+            }
+        }
+
+        const gen = passwordGenerator();
+        // Перший виклик next() ініціалізує генератор до першого yield
+        gen.next();
+
+        while (true) {
+            const input = prompt("Введіть символ для пароля (або 'done' для завершення):");
+            
+            // Передаємо значення назад у генератор
+            const res = gen.next(input);
+
+            if (input === 'done' || res.done) {
+                document.getElementById('result').innerHTML = `<h3>Ваш пароль: ${res.value}</h3>`;
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
