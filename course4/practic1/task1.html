@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5: Фільтрація замовлень</title>
+</head>
+<body>
+
+    <div id="result"></div>
+
+    <script>
+        const orders = [
+            {
+                orderId: 101,
+                customer: { name: "Іван", email: "ivan@gmail.com" },
+                items: ["Ноутбук", "Мишка"],
+                total: 25000
+            },
+            {
+                orderId: 102,
+                customer: { name: "Олена", email: "olena@gmail.com" },
+                items: ["Клавіатура"],
+                total: 1500
+            },
+            {
+                orderId: 103,
+                customer: { name: "Тарас", email: "taras@gmail.com" },
+                items: ["Монітор"],
+                total: 8000
+            },
+            {
+                orderId: 104,
+                customer: { name: "Марія", email: "maria@gmail.com" },
+                items: ["Навушники"],
+                total: 2000
+            }
+        ];
+
+        function getTotalSpentByCustomer(ordersArray, customerName) {
+            return ordersArray
+
+                .filter(order => order.customer.name === customerName)
+
+                .reduce((sum, order) => sum + order.total, 0);
+        }
+
+        const targetCustomer = "Тарас";
+        const totalSpent = getTotalSpentByCustomer(orders, targetCustomer);
+
+        console.log(`Загалом витрачено клієнтом ${targetCustomer}:`, totalSpent);
+        document.getElementById('result').innerHTML = `
+            <h3>Клієнт: ${targetCustomer}</h3>
+            <p>Загальна сума витрат: <strong>${totalSpent} грн</strong></p>
+        `;
+    </script>
+</body>
+</html>

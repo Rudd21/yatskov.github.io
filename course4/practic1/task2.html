@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 6: Об'єднання даних про покупки</title>
+</head>
+<body>
+
+    <div id="result"></div>
+
+    <script>
+        const products = [
+            { productId: 1, name: "Ноутбук", price: 30000 },
+            { productId: 2, name: "Смартфон", price: 15000 },
+            { productId: 3, name: "Навушники", price: 2000 }
+        ];
+
+        const purchases = [
+            { purchaseId: 101, productId: 1, quantity: 2 },
+            { purchaseId: 102, productId: 2, quantity: 1 },
+            { purchaseId: 103, productId: 1, quantity: 1 },
+            { purchaseId: 104, productId: 3, quantity: 4 }
+        ];
+
+        function getTotalSales(productsList, purchasesList) {
+            return purchasesList.reduce((acc, purchase) => {
+
+                const product = productsList.find(p => p.productId === purchase.productId);
+
+                if (product) {
+                    const productName = product.name;
+                    const saleTotal = product.price * purchase.quantity;
+
+                    acc[productName] = (acc[productName] || 0) + saleTotal;
+                }
+
+                return acc;
+            }, {});
+        }
+
+        const totalSales = getTotalSales(products, purchases);
+
+        console.log("Загальні продажі товарів:", totalSales);
+
+        let outputHTML = "<h3>Загальні суми продажів товарів:</h3><ul>";
+        for (const [productName, total] of Object.entries(totalSales)) {
+            outputHTML += `<li><strong>${productName}:</strong> ${total} грн</li>`;
+        }
+        outputHTML += "</ul>";
+
+        document.getElementById('result').innerHTML = outputHTML;
+    </script>
+</body>
+</html>
