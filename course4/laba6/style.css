@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#tabs {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#tabs .tab {
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    background: #e0e0e0;
+    border: 1px solid #707070;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    user-select: none;
+}
+
+#tabs .whiteborder {
+    border: 1px solid #707070;
+    border-bottom: 1px solid #ffffff;
+    background: rgb(0, 132, 255);
+    color: white;
+}
+
+#tabs .tabContent {
+    min-width: 500px;
+    border: 1px solid #707070;
+    position: relative;
+    top: -1px;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 0 0 4px 4px;
+    background: #fff;
+}
+
+#tabs .show {
+    display: flex !important;
+}
+
+#tabs .hide {
+    display: none !important;
+}
+
+.wrapper {
+    flex: 1;
+    border: 1px solid gray;
+    margin-right: 20px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.property-row {
+    display: grid;
+    grid-template-columns: 40% 35% 15% 10%;
+    align-items: center;
+}
+
+.property-row p {
+    font-size: 14px;
+}
+
+.preview-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#block {
+    width: 220px;
+    height: 100px;
+    background: green;
+    margin-top: 5px;
+}
+
+#ttl, #ttr, #tbr, #tbl {
+    text-align: center;
+    width: 45px;
+}
+
+input {
+    margin: 0 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 5px;
+    padding: 5px;
+    resize: none;
+}
+
+/* Стилі для Alignment та Decoration */
+.align-wrapper, .decoration-wrapper {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.align-options, .decoration-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.align, .decoration {
+    height: 40px;
+    background-color: gainsboro;
+    margin: 5px 0;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 14px;
+    user-select: none;
+}
+
+.align:hover, .decoration:hover {
+    cursor: pointer;
+    background-color: #d8d8d8;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.green-text {
+    color: green;
+}
+
+.result {
+    flex: 1;
+    padding: 15px;
+    border: 1px dashed #aaa;
+    border-radius: 4px;
+    min-height: 200px;
+}
