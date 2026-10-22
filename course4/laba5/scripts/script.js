@@ -105,7 +105,7 @@ function Multiplication_calculator2(){
     let range = 5; 
     for (let i = 0; i < 3; i++) {
         do {
-            option_num = Math.floor(Math.random() * (2 * range)) + (right_value - range);//2 * - показує кількість чисел, які можна згенерувати в обидва боки від right_value - ЦЕ НЕ КОМЕНТАР ЧАТА-ДЖПТ
+            option_num = Math.floor(Math.random() * (2 * range)) + (right_value - range);
         } while (generatedNumbers.includes(option_num)|| option_num < 1||option_num===right_value); 
         
         generatedNumbers.push(option_num); 
@@ -134,54 +134,3 @@ function answerChange(value) {
     }
     score.textContent =`Загальний рахунок ${(right_answers * 100 / score_count).toFixed(1)}% (${right_answers} правильних відповідей з ${score_count})`;
 }
-
-
-// let imagesArray = [ {path: 'images/001.jpg',
-//     title : 'Real Madrid',
-//     description : 'Іспанський футбольний клуб'
-//     },
-//     {path: 'images/002.jpg',
-//     title : 'Manchester City',
-//     description : 'Англійський футбольний клуб'
-//     },
-//     {path: 'images/003.jpg',
-//     title : 'Bayern Munich',
-//     description : 'Німецький футбольний клуб'
-//     }
-    
-//     ];
-   
-
-// let index = 0;
-
-// function initPhotoRotator(photoblock, imagesArray, index){
-//     let img = document.createElement('img');
-//     img.src = imagesArray[index].path;
-//     let photoblock = document.getElementById('photoblock');
-//     if (photoblock) {
-//      photoblock.appendChild(img);
-//     } else {
-//         console.error(`Елемент не знайдено`)    ;
-//     }
-//     }
-
-//     function nextPhoto(){
-//         index++;
-//         if (index>=imagesArray.length){
-//             index = 0;
-//         }
-//             initPhotoRotator(index);
-//     }
-
-//     function prevPhoto(){
-//         index--;
-//         if (index<0){
-//             index = imagesArray.length - 1;
-//         }
-//             initPhotoRotator(index);
-//     }
-
-
-// initPhotoRotator(photoblock, imagesArray, index);
-
-// div 1 в html; зміна тільки адреси зображень
